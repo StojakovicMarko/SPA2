@@ -59,8 +59,8 @@ public class StabloAutomobilProgram {
 			break;
 			
 		case 5:
-			boolean je = stablo.jeBST();
-			System.out.println(je? "Moze":"Ne moze");
+			boolean je = stablo.jeBST1();
+			System.out.println(je? "Jeste BST":"Nije BST");
 			break;
 			
 		default:

@@ -187,27 +187,22 @@ public class StabloAutomobil {
 	// su svi u levom podstablu sa manje kilometara, a u desnom
 	// podstablu sa vise. Listovi trivijalno zadovoljavaju uslov.
 	
-	public boolean jeBST() {
-		List<Integer> lista = new ArrayList<Integer>();
-		if(koren == null)
-			return false;
-		jeBst(koren,lista);
-		return lista.isEmpty()? true:false;
+
+	
+	public boolean jeBST1() {
+		return isBSTUtil1(koren, Long.MIN_VALUE, Long.MAX_VALUE);
 	}
 
-	private void jeBst(Cvor cvor, List<Integer> lista) {
-		// TODO Auto-generated method stub
-		if(cvor == null)
-			return;
-		if(cvor.levo != null && cvor.levo.info.getKilometraza() > cvor.info.getKilometraza()) {
-			lista.add(1);
-		}
-        if(cvor.desno != null && cvor.desno.info.getKilometraza() < cvor.info.getKilometraza()) {
-        	lista.add(1);
-		}
-        jeBst(cvor.levo, lista);
-        jeBst(cvor.desno, lista);
+	private boolean isBSTUtil1(Cvor cvor, long min, long max) {
 		
+		if (cvor == null)
+			return true;
+		
+		if (cvor.info.getKilometraza() < min || cvor.info.getKilometraza() > max)
+			return false;
+		
+		return isBSTUtil1(cvor.levo, min, cvor.info.getKilometraza() - 1) && 
+			   isBSTUtil1(cvor.desno, cvor.info.getKilometraza() + 1, max) ;
 	}
 
 }

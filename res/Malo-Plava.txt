@@ -4,10 +4,10 @@
   |      |
   |      \-----(o) Lancia Lybra;Plava;SU 741-KC;14260
   |
--(o) Renault Twingo;Plava;NI 747-EF;444
+-(o) Renault Twingo;Plava;NI 747-EF;44444
   |
   |
-  |      /-----(o) Peugeot 206;Plava;LE 810-ZO;31865
+  |      /-----(o) Peugeot 206;Plava;LE 810-ZO;45865
   |      |
   \-----(o) Citroen C4;Plava;BG 082-ZD;13658
          |   
